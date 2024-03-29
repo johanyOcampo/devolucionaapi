@@ -21,7 +21,6 @@ const DevolucionSchema = ({
     producto: {
         type: String,
         required: [true, 'El producto es requerido'],
-        enum: ['cuerdas', 'proteina', 'mancuernas'],
     },
 
     motivo: {
