@@ -23,6 +23,11 @@ const DevolucionSchema = ({
         required: [true, 'El producto es requerido'],
     },
 
+    fecha: {
+        type: String,
+        required: [true, 'la fecha es requerido'],
+    },
+
     motivo: {
         type: String,
         required: [true, 'El motivo es requeridod'],

@@ -29,11 +29,11 @@ const postDevolucion = async(req, res) => {
 }
 
 const putDevolucion = async(req, res) => {
-    const { nombreCliente, venta, cantidad,  producto, motivo, estado } = req.body //Desesctructurar
+    const { nombreCliente, venta, cantidad,  producto, fecha, motivo, estado } = req.body //Desesctructurar
     let mensaje = ''
     try {
         const devolucion = await Devolucion.findOneAndUpdate({nombreCliente: nombreCliente},
-        {venta:venta, cantidad:cantidad,  producto:producto, motivo:motivo, estado:estado})
+        {venta:venta, cantidad:cantidad,  producto:producto,fecha:fecha, motivo:motivo, estado:estado})
         mensaje = 'Actualización exitosa'
     } catch (error) {
         mensaje = error
